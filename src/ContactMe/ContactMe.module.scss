@@ -1,0 +1,56 @@
+@import '../css-config/mixins.scss';
+.ContactMe{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    max-width: 1200px;
+    margin: 50px auto;
+    @include md{
+        flex-direction: row;
+    }
+    .left{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        @include md{
+            flex: 1;
+        }
+        div{
+            color: #FF5C00;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 600;
+            @include md{
+                text-align: left;
+                font-size: 3rem;
+            }
+            @include lg {
+                font-size: 5rem;
+            }
+        }
+        input{
+            padding: 10px;
+        }
+        textarea{
+            padding: 10px;
+            height: 10rem;
+        }
+    }
+    .right{
+        @include md{
+            flex: 1;
+            // width: 50%;
+        }
+        .myDetails{
+            color: white;
+            height: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+            background-image: linear-gradient(to bottom, rgb(255, 145, 0), rgb(255, 94, 0));
+            border-radius: 5px;
+        }
+    }
+}

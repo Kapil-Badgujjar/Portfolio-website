@@ -1,0 +1,35 @@
+@import '../css-config/mixins.scss';
+.carousel{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0px;
+    padding: 20px;
+    background-color: white;
+
+    .title{
+        font-size: 1.3rem;
+        font-weight: 600;
+        @include md{
+            font-size: 1.5rem;
+        }
+    }
+    div{
+        display: flex;
+        gap: 8px;
+        flex-direction: column-reverse;
+        @include md{
+            flex-direction: row;
+        }
+        img{
+            width: 240px;
+            @include md{
+                width: 400px;
+            }
+        }
+        .description{
+            text-align: justify;
+            font-weight: 500;
+        }
+    }
+}

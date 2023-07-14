@@ -1,0 +1,25 @@
+@import '../css-config/mixins.scss';
+.ProjectsContainer{
+    background: #446885;
+    padding: 50px 20px;
+    .Projects{
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        max-width: 1200px;
+        margin: 50px auto;
+        h1{
+            color: #FF5C00;
+            text-align: center;
+            font-size: 2rem;
+            @include md{
+                text-align: left;
+                font-size: 3rem;
+            }
+            @include lg {
+                font-size: 5rem;
+            }
+        }
+        .Carousels{
+    
+        }
+    }
+}
