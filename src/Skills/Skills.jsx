@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './skills.module.scss'
+import styles from './Skills.module.scss'
 import htmlImage from '/html-5.png'
 import cssImage from '/css-3.png'
 import javaScriptImage from '/javascript.png'
