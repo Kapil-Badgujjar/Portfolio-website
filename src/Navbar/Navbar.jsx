@@ -12,12 +12,12 @@ export default function Navbar() {
         </div>
         <div className={styles.right}>
           <ul className={styles.menuContainer}>
-            <li>Home</li>
-            <li>About</li>
-            <li>Skills</li>
-            <li>Projects</li>
+            <li className={styles.pagelink}><a  href="#home" >Home</a></li>
+            <li className={styles.pagelink}><a  href="#about" >About</a></li>
+            <li className={styles.pagelink}><a  href="#skills" >Skills</a></li>
+            <li className={styles.pagelink}><a  href="#projects" >Projects</a></li>
             <li>
-              <Button title="Contact Me" />
+              <a href="#contactme"><Button title="Contact Me" /></a>
             </li>
           </ul>
         </div>
@@ -26,12 +26,12 @@ export default function Navbar() {
             <img src={ show ? close : menu} alt="menu open close button" />
           </div>
           <ul className={`${styles.menuContainer} ${show ? styles.menuContainerOn: ''}`}>
-            <li>Home</li>
-            <li>About</li>
-            <li>Skills</li>
-            <li>Projects</li>
-            <li>
-              <Button title="Contact Me" />
+            <li className={styles.pagelink} onClick={()=>{setShow(false)}}><a  href="#home" >Home</a></li>
+            <li className={styles.pagelink} onClick={()=>{setShow(false)}}><a  href="#about" >About</a></li>
+            <li className={styles.pagelink} onClick={()=>{setShow(false)}}><a  href="#skills" >Skills</a></li>
+            <li className={styles.pagelink} onClick={()=>{setShow(false)}}><a  href="#projects" >Projects</a></li>
+            <li onClick={()=>{setShow(false)}}>
+              <a href="#contactme"><Button title="Contact Me" /></a>
             </li>
           </ul>
         </div>

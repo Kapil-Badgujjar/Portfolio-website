@@ -10,17 +10,17 @@ import PostgreSQLImage from '/PostgreSQL.png'
 import FigmaImage from '/figma.png'
 export default function Skills() {
   return (
-    <div className={styles.skillsContainer}>
+    <div id="skills" className={styles.skillsContainer}>
       <h1>Skills</h1>
       <div className={styles.skillsimages}>
-        <div><img src={htmlImage} alt="" /></div>
-        <div><img src={cssImage} alt="" /></div>
-        <div><img src={javaScriptImage} alt="" /></div>
-        <div><img src={ReactJSImage} alt="" /></div>
-        <div><img src={NodeJSImage} alt="" /></div>
-        <div><img src={MongoDBImage} alt="" /></div>
-        <div><img src={PostgreSQLImage} alt="" /></div>
-        <div><img src={FigmaImage} alt="" /></div>
+        <div className={styles.s1 }><div><img src={htmlImage} alt="" /><span>Proficient Level</span></div></div>
+        <div className={styles.s2 }><div><img src={cssImage} alt="" /><span>Proficient Level</span></div></div>
+        <div className={styles.s3 }><div><img src={javaScriptImage} alt="" /><span>Proficient Level</span></div></div>
+        <div className={styles.s4 }><div><img src={ReactJSImage} alt="" /><span>Proficient Level</span></div></div>
+        <div className={styles.s5 }><div><img src={NodeJSImage} alt="" /><span>Proficient Level</span></div></div>
+        <div className={styles.s6 }><div><img src={MongoDBImage} alt="" /><span>Proficient Level</span></div></div>
+        <div className={styles.s7 }><div><img src={PostgreSQLImage} alt="" /><span>Proficient Level</span></div></div>
+        <div className={styles.s8 }><div><img src={FigmaImage} alt="" /><span>Proficient Level</span></div></div>
       </div>
     </div>
   )

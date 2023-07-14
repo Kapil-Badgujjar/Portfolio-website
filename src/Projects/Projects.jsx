@@ -6,7 +6,7 @@ import chatappimage from '/ecom2.png';
 import webcrawlerimage from '/ecom3.png';
 export default function Projects() {
   return (
-    <div className={styles.ProjectsContainer}>
+    <div id="projects" className={styles.ProjectsContainer}>
     <div className={styles.Projects}>
       <h1>Projects</h1>
       <div className={styles.Carousels}>

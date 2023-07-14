@@ -3,14 +3,17 @@ import styles from './ContactMe.module.scss'
 import Button from '../Button/Button'
 export default function ContactMe() {
   return (
-    <div className={styles.ContactMe}>
+    <div id="contactme" className={styles.ContactMe}>
       <div className={styles.left}>
-        <div>Get in touch</div>
-        <input type="email" placeholder='email' />
-        <input type="text" placeholder='Your Name' />
-        <input type="text" placeholder='Phone Number' />
-        <textarea placeholder='Write a message...' />
-        <Button title="Submit" />
+          {/* <form actioin="mailto: kapilbadgujjar99@gmail.com" method="post" enctype="text/plain"> */}
+            <div>Get in touch</div>
+            <input type="email" placeholder='email' />
+            <input type="text" placeholder='Your Name' />
+            <input type="text" placeholder='Phone Number' />
+            <textarea placeholder='Write a message...' />
+            {/* <input type="submit" value="Submit"/> */}
+            <Button title="Submit"/>
+          {/* </form> */}
       </div>
       <div className={styles.right}>
         <div className={styles.myDetails}>
@@ -24,6 +27,7 @@ export default function ContactMe() {
             <div>
                 Address: VPO Jahazgarh, Jhajjar-124103, Haryana
             </div>
+            
         </div>
       </div>
     </div>
