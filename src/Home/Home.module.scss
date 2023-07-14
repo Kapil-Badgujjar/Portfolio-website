@@ -1,54 +1,38 @@
 @import '../css-config/mixins.scss';
-.homeContainer {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    background-color: #f5f5f5;
-    font-family: 'Roboto', sans-serif;
-    padding: 0px 20px;
-    padding-bottom: 100px;
-    @include md{
-        margin-bottom: 0;
-    }
-    @include lg {
-        height: 1080px;
-        justify-content: space-between;
-    }
-    .innerContainer {
-        box-sizing: border-box;
+.Home{
+    // background-image: url('/public/pattern1bk.png');
+    background-image: url('/public/cp2.svg');
+    .HomeContainer {
         display: flex;
         flex-direction: column-reverse;
-        justify-content: center;
-        gap: 50px;
-        align-items: center;
-        margin-top: 160px;
+        font-family: 'Roboto', sans-serif;
+        padding: 160px 20px 60px 20px;
+        max-width: 1200px;
+        height: 100vh;
+        margin: 0px auto;
+        box-sizing: border-box;
+        background-color: rgba(255, 255, 255, 0.8);
         @include md{
             flex-direction: row;
-        }
-        @include lg{
-            margin: 0px;
-            padding: 210px 50px;
+            padding: 120px 0px 60px 0px;
         }
         .left{
+            flex: 1;
             display: flex;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
             gap: 10px;
+            border-radius: 5px;
             @include md{
                 align-items: start;
             }
             h2{
-                font-size: 2.5rem;
+                font-size: 2rem;
                 text-shadow: 2px 3px 5px 1px rgba(0, 0, 0, 0.89);
                 @include md{
-                    font-weight: 300;
+                    font-weight: 400;
                     font-size: 4rem;
-                }
-                @include lg{
-                    font-weight: 300;
-                    font-size: 6rem;
                 }
             }
             h1{
@@ -56,47 +40,41 @@
                 margin-bottom: 10px;
                 color: #FF5C00;
                 @include md{
-                    font-size: 3.5rem;
-                }
-                @include lg{
-                    font-size: 7rem;
-                    margin-bottom: 0px;
+                    font-size: 5rem;
                 }
             }
             p{
                 font-size: 1.2rem;
-                font-weight: 500;
+                text-align: center;
                 @include md{
-                    font-size: 2rem;
+                    font-size: 1.5rem;
+                    text-align: start;
                 }
             }
         }
         .right{
             box-sizing: border-box;
+            flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 12px;
-            border-radius: 50%;
-            background: linear-gradient(to bottom, #00b7ff, #ff3c00);
-            box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.2);
-            @include md {
-                padding: 15px;
-            }
-            @include lg{
-                padding: 20px;
-            }
-            img{
+            padding: 20px;
+            div{
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 border-radius: 50%;
-                border: 3px solid white;
-                width: 200px;
-                @include md {
+                padding: 12px;
+                background: linear-gradient(to bottom, #ff0000, #ff00b3);
+                img{
                     width: 250px;
-                }
-                @include lg {
-                    width: 500px;
+                    border-radius: 50%;
+                    @include md{
+                        width: 400px;
+                    }
                 }
             }
+            // background-color: lightblue;
         }
     }
 }
