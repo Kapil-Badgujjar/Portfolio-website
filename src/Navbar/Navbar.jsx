@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../Button/Button";
 import styles from "./Navbar.module.scss";
-
+import close from '/close.png';
+import menu from '/menu.png';
 export default function Navbar() {
+  const [show, setShow] = useState(false);
   return (
       <div className={styles.navbar}>
         <div className={styles.left}>
@@ -20,7 +22,10 @@ export default function Navbar() {
           </ul>
         </div>
         <div className={styles.menuList}>
-          <ul className={styles.menuContainer}>
+          <div onClick={()=>{ setShow(show ? false : true)}}>
+            <img src={ show ? close : menu} alt="menu open close button" />
+          </div>
+          <ul className={`${styles.menuContainer} ${show ? styles.menuContainerOn: ''}`}>
             <li>Home</li>
             <li>About</li>
             <li>Skills</li>
