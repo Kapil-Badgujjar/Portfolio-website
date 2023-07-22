@@ -1,7 +1,6 @@
 @import '../css-config/mixins.scss';
 .Home{
-    // background-image: url('/public/pattern1bk.png');
-    background-image: url('/public/cp2.svg');
+    background-image: url('/public/ani_bk3.svg');
     .HomeContainer {
         display: flex;
         flex-direction: column-reverse;
@@ -11,10 +10,9 @@
         height: 100vh;
         margin: 0px auto;
         box-sizing: border-box;
-        background-color: rgba(255, 255, 255, 0.8);
         @include md{
             flex-direction: row;
-            padding: 120px 0px 60px 0px;
+            padding: 120px 20px 60px 20px;
         }
         .left{
             flex: 1;
@@ -24,6 +22,7 @@
             align-items: center;
             gap: 10px;
             border-radius: 5px;
+            color: white;
             @include md{
                 align-items: start;
             }
@@ -31,14 +30,16 @@
                 font-size: 2rem;
                 text-shadow: 2px 3px 5px 1px rgba(0, 0, 0, 0.89);
                 @include md{
-                    font-weight: 400;
+                    font-weight: 300;
                     font-size: 4rem;
                 }
             }
             h1{
                 font-size: 2.5rem;
                 margin-bottom: 10px;
-                color: #FF5C00;
+                // color: #FF5C00;
+                font-weight: 400;
+                color: yellow;
                 @include md{
                     font-size: 5rem;
                 }
@@ -46,6 +47,8 @@
             p{
                 font-size: 1.2rem;
                 text-align: center;
+                font-weight: 200;
+                font-family: 'Heebo', sans-serif;
                 @include md{
                     font-size: 1.5rem;
                     text-align: start;
@@ -64,7 +67,8 @@
                 align-items: center;
                 border-radius: 50%;
                 padding: 12px;
-                background: linear-gradient(to bottom, #ff0000, #ff00b3);
+                background: linear-gradient(to bottom, #152433, #908a41);
+                // background: linear-gradient(to bottom, #ff0000, #ff00b3);
                 img{
                     overflow: hidden;
                     width: 200px;
