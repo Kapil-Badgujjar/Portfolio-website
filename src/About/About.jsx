@@ -12,9 +12,9 @@ export default function About() {
         <div className={styles.AboutContainer}>
             <div className={styles.Left}>
             <h1>About me</h1>
-            <p>I am Full Stack Web Developer. I can code in Node.js, Express.js, React.js, JavaScript etc. and for database MongoDB, MySQL, MSSQL, PostgreSQL etc.</p>
+            <p>I'm a passionate Full Stack Web Developer and UI/UX Designer skilled in JavaScript, ReactJS, NodeJS, MongoDB, PostgreSQL, and user-centric design. I love crafting exceptional digital experiences and thrive on creative problem-solving. Let's collaborate and bring ideas to life!</p>
             <div className={styles.button}>
-                <a href="https://drive.google.com/uc?export=download&id=1TUCII2Do5dD070-CBD1U_us752Ay5sov">
+                <a href="https://drive.google.com/uc?export=download&id=1wiYPuf-axwFeGTDBof03s-pbdtUX1bgy">
                     <Button title="Download CV" />
                 </a>
             </div>

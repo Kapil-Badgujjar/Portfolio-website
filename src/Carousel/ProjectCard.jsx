@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Carousel.module.scss'
 
-export default function Carousel(props) {
+export default function ProjectCard(props) {
   return (
     <div className={styles.carousel}>
       <div className={styles.title}>{props.title}</div>

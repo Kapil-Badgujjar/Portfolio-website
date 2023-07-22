@@ -53,7 +53,6 @@
             }
         }
         .right{
-            box-sizing: border-box;
             flex: 1;
             display: flex;
             justify-content: center;
@@ -67,9 +66,13 @@
                 padding: 12px;
                 background: linear-gradient(to bottom, #ff0000, #ff00b3);
                 img{
-                    width: 250px;
+                    overflow: hidden;
+                    width: 200px;
                     border-radius: 50%;
                     @include md{
+                        width: 350px;
+                    }
+                    @include lg{
                         width: 400px;
                     }
                 }

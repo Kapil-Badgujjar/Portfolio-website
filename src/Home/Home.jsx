@@ -23,7 +23,7 @@ export default function Home() {
         <div className={styles.left}>
             <h2>Hey...! I am</h2>
             <h1>{name}</h1>
-            <p>I am a passionate full stack web developer. I can code in ReactJS, NodeJS, Javascript, MongoDB and SQL. I had created 3 projects like SuperMART, Signal, Web Crawler etc.</p>
+            <p>Hello, I'm a passionate Full Stack Web Developer and UI/UX Designer. I create exceptional digital experiences with a focus on user-centric design. Let's build impactful projects together!</p>
         </div>
         <div className={styles.right}>
             <div>

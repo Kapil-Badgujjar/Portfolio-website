@@ -1,85 +1,91 @@
 @import '../css-config/mixins.scss';
-.skillsContainer {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    max-width: 1200px;
-    min-height: 100vh;
-    margin: 50px auto;
-    h1{
-        color: #FF5C00;
-        text-align: center;
-        font-size: 2rem;
-        font-weight: 800;
-        @include md{
-            text-align: left;
-            font-size: 5rem;
-        }
-    }
-    .skillsimages{
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+.skills{
+    .skillsContainer {
+        font-family: 'Plus Jakarta Sans', sans-serif;
         max-width: 1200px;
-        gap: 20px;
+        margin: 50px auto;
         @include md{
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            padding: 10px;
+            min-height: 100vh;
         }
-        div{ 
-            padding: 3px;
-            border-radius: 5px;
-            box-shadow: 1px 1px 2px 0px rgba(255, 255, 255, 0.15);
-            div{
-                // border: 2px solid black;
+        h1{
+            color: #FF5C00;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 60px;
+            @include md{
+                text-align: left;
+                font-size: 5rem;
+            }
+        }
+        .skillsimages{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            max-width: 1200px;
+            gap: 20px;
+            padding: 0px 20px;
+            @include md{
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                padding: 10px;
+            }
+            div{ 
+                padding: 3px;
                 border-radius: 5px;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                align-items: center;
-                background-color: rgba(255, 255, 255, 0.9);
-                height: 270px;
-                padding-bottom: 30px;
-                @include md{
-                    padding: 10px;
-                }
-                img{
-                    width: 120px;
-                    padding: 10px;
-                    @include md {
-                        width: 180px;
+                div{
+                    border-radius: 5px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    height: 100px;
+                    align-items: center;
+                    background-color: rgba(255, 255, 255, 0.9);
+                    box-shadow: none;
+                    padding-bottom: 30px;
+                    @include md{
+                        height: 270px;
+                        padding: 10px;
                     }
-                }
-                &:hover{
-                    background-color: rgba(255, 255, 255, 0.8);
                     img{
-                        animation: imagescale 0.3s forwards ease-in-out;
-                        // transition: 0.3s linear;
-                        // transform: scale(1.05);
+                        width: 80px;
+                        padding: 10px;
+                        @include md {
+                            width: 180px;
+                        }
+                    }
+                    &:hover{
+                        background-color: rgba(255, 255, 255, 0.8);
+                        img{
+                            animation: imagescale 0.3s forwards ease-in-out;
+                            // transition: 0.3s linear;
+                            // transform: scale(1.05);
+                        }
                     }
                 }
             }
-        }
-        .s1{
-            background-image: linear-gradient(to bottom, transparent, red);
-        }
-        .s2{
-            background-image: linear-gradient(to bottom, transparent, blue);
-        }
-        .s3{
-            background-image: linear-gradient(to bottom, transparent, yellow);
-        }
-        .s4{
-            background-image: linear-gradient(to bottom, transparent, skyblue);
-        }
-        .s5{
-            background-image: linear-gradient(to bottom, transparent, green);
-        }
-        .s6{
-            background-image: linear-gradient(to bottom, transparent, lightgreen);
-        }
-        .s7{
-            background-image: linear-gradient(to bottom, transparent, darkblue);
-        }
-        .s8{
-            background-image: linear-gradient(to bottom, transparent, purple);
+            .s1{
+                background-image: linear-gradient(to bottom, transparent, red);
+            }
+            .s2{
+                background-image: linear-gradient(to bottom, transparent, blue);
+            }
+            .s3{
+                background-image: linear-gradient(to bottom, transparent, yellow);
+            }
+            .s4{
+                background-image: linear-gradient(to bottom, transparent, skyblue);
+            }
+            .s5{
+                background-image: linear-gradient(to bottom, transparent, green);
+            }
+            .s6{
+                background-image: linear-gradient(to bottom, transparent, lightgreen);
+            }
+            .s7{
+                background-image: linear-gradient(to bottom, transparent, darkblue);
+            }
+            .s8{
+                background-image: linear-gradient(to bottom, transparent, purple);
+            }
         }
     }
 }
