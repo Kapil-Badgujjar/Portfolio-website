@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./ContactMe.module.scss";
-import Button from "../Button/Button";
+import emailimg from '/email.png';
+import phoneimg from '/phone.png';
+import addressimg from '/address.png';
 export default function ContactMe() {
   return (
     <div id="contactme" className={styles.ContactMe}>
@@ -34,25 +36,25 @@ export default function ContactMe() {
         </div>
         <div className={styles.right}>
           <div className={styles.myDetails}>
-            <h2>You can contact me here</h2>
+            <p>You can contact me here :</p>
             <div>
-              <h3>E-mail: </h3>
+              <div className={styles.title}><img src={emailimg} alt="email-id" /><h3>E-mail: </h3></div>
               <hr />
               <a href="mailto:kapilbadgujjar99@gmail.com">
-                <h1>kapilbadgujjar99@gmail.com</h1>
+                <p>kapilbadgujjar99@gmail.com</p>
               </a>
             </div>
             <div>
-              <h3>Phone:</h3>
+            <div className={styles.title}><img src={phoneimg} alt="phone-number" /><h3>Phone:</h3></div>
               <hr />
               <a href="tel: +91 7988220911">
-                <h1>+91 7988220911</h1>
+                <p>+91 7988220911</p>
               </a>
             </div>
             <div>
-              <h3>Address: </h3>
+            <div className={styles.title}><img src={addressimg} alt="address" /><h3>Address: </h3></div>
               <hr />
-              <h2>VPO Jahazgarh, Jhajjar-124103, Haryana</h2>
+              <p>Jhajjar &#40;124103&#41;, Haryana, India</p>
             </div>
           </div>
         </div>

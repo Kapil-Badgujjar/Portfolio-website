@@ -1,13 +1,13 @@
 @import '../css-config/mixins.scss';
 .ProjectsContainer{
-    background-image: url('../../public/ani_bk10.svg');
+    background-image: url('../../public/Moon_1.svg');
     padding: 50px 20px;
     .Projects{
         font-family: 'Heebo', sans-serif;
         max-width: 1200px;
         margin: 50px auto;
         h1{
-            color: rgb(241, 205, 0);
+            color: gold;
             text-align: center;
             font-size: 2rem;
             font-weight: 300;
@@ -17,6 +17,7 @@
             }
             @include lg {
                 font-size: 5rem;
+                font-weight: 400;
             }
         }
         // .Carousels{

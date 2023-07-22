@@ -14,14 +14,14 @@ export default function Skills() {
     <div  className={styles.skillsContainer}>
       <h1>Skills</h1>
       <div className={styles.skillsimages}>
-        <div className={styles.s1 }><div><img src={htmlImage} alt="" /><span>Proficient Level</span></div></div>
-        <div className={styles.s2 }><div><img src={cssImage} alt="" /><span>Proficient Level</span></div></div>
-        <div className={styles.s3 }><div><img src={javaScriptImage} alt="" /><span>Proficient Level</span></div></div>
-        <div className={styles.s4 }><div><img src={ReactJSImage} alt="" /><span>Proficient Level</span></div></div>
-        <div className={styles.s5 }><div><img src={NodeJSImage} alt="" /><span>Proficient Level</span></div></div>
-        <div className={styles.s6 }><div><img src={MongoDBImage} alt="" /><span>Proficient Level</span></div></div>
-        <div className={styles.s7 }><div><img src={PostgreSQLImage} alt="" /><span>Proficient Level</span></div></div>
-        <div className={styles.s8 }><div><img src={FigmaImage} alt="" /><span>Proficient Level</span></div></div>
+        <div className={styles.s1 }><div><img src={htmlImage} alt="" /><span>HTML5</span></div></div>
+        <div className={styles.s2 }><div><img src={cssImage} alt="" /><span>CSS3</span></div></div>
+        <div className={styles.s3 }><div><img src={javaScriptImage} alt="" /><span>JavaScript</span></div></div>
+        <div className={styles.s4 }><div><img src={ReactJSImage} alt="" /><span>ReactJS</span></div></div>
+        <div className={styles.s5 }><div><img src={NodeJSImage} alt="" /><span>NodeJS</span></div></div>
+        <div className={styles.s6 }><div><img src={MongoDBImage} alt="" /><span>MongoDB</span></div></div>
+        <div className={styles.s7 }><div><img src={PostgreSQLImage} alt="" /><span>PostgreSQL</span></div></div>
+        <div className={styles.s8 }><div><img src={FigmaImage} alt="" /><span>Figma</span></div></div>
       </div>
     </div>
     </div>

@@ -13,12 +13,12 @@
     backdrop-filter: blur(8px);
     box-shadow: 2px 2px 5px 0px rgba($color: #000000, $alpha: 0.05);
     z-index: 1;
-    @include md{
+    @include xl{
         width:calc(100% - 100px);
         margin: 5px 50px;
         border-radius:  10px;
     }
-    @include lg{
+    @include xxl{
         width: calc(100% - 300px);
         margin: 5px 150px;
         height: 80px;
@@ -38,13 +38,12 @@
             font-weight: 300;
         }
         .left{
-            span{
-                // color: #FF5C00;
-                color: yellow;
-                font-size: 2rem;
-                font-weight: 700;
-                @include lg{
-                    font-size: 2.5rem;
+            a{
+                img{
+                    width: 80px;
+                    @include lg{
+                        width: 120px;
+                    }
                 }
             }
         }
@@ -81,7 +80,7 @@
                         a{
                             color: darkblue
                         }
-                        background-color: yellow;
+                        background-color: gold;
                     }
                 }
             }
@@ -127,7 +126,7 @@
                 }
                 &:hover{
                     cursor: pointer;
-                    background-color: yellow;
+                    background-color: gold;
                 }
             }
         }
