@@ -44,14 +44,17 @@
                 align-items: center;
             }
             .SocialMedia{
-                margin-top: 20px;
+                margin-top: 10px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                gap: 26px;
+                gap: 16px;
                 // background-color: aliceblue;
                 padding: 10px;
                 border-radius: 5px;
+                @include md{
+                    gap: 10px;
+                }
                 a{   
                     text-decoration: none;
                     color: black;
@@ -60,17 +63,20 @@
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    gap: 8px;     
+                    gap: 4px;     
                     @include lg {
                         flex-direction: row;
                         
                     }        
                     img{
-                        width: 60px;
+                        width: 30px;
+                        @include md{
+                            width: 50px;
+                        }
                     }
                     span{
                         display: none;
-                        font-weight: 600;
+                        font-weight: 500;
                         @include sm{
                             display: flex;
                         }
@@ -114,6 +120,9 @@
             img{
                 width: 250px;
                 @include md{
+                    width: 350px;
+                }
+                @include lg{
                     width: 400px;
                 }
             }

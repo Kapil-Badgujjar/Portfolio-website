@@ -6,7 +6,8 @@ import menu from '/menu.png';
 export default function Navbar() {
   const [show, setShow] = useState(false);
   return (
-      <div className={styles.navbar}>
+    <div className={styles.navbar}>
+      <div className={styles.navbarContainer}>
         <div className={styles.left}>
           <span>Kapil</span>
         </div>
@@ -36,5 +37,6 @@ export default function Navbar() {
           </ul>
         </div>
       </div>
+    </div>
   );
 }
