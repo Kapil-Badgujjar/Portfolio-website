@@ -1,100 +1,102 @@
 @import "../css-config/mixins.scss";
 .ContactMe {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 500;
-  max-width: 1200px;
-
-  margin: 50px auto;
-  padding: 0px 20px;
-  @include md {
-    flex-direction: row;
-  }
-  .left {
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      @include md {
-        flex: 1;
-      }
-      div {
-        color: #ff5c00;
-        text-align: center;
-        font-size: 2rem;
-        font-weight: 600;
+  background-image: url('../../public/ani_bk3.svg');
+  padding: 50px 0px;
+  .ContactMeContainer {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-family: 'Heebo', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 0px 20px;
+    @include md {
+      flex-direction: row;
+    }
+    .left {
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
         @include md {
-          text-align: left;
-          font-size: 3rem;
+          flex: 1;
         }
-        @include lg {
-          font-size: 5rem;
+        div {
+          color: yellow;
+          text-align: center;
+          font-size: 2rem;
+          font-weight: 300;
+          @include md {
+            text-align: left;
+            font-size: 3rem;
+          }
+          @include lg {
+            font-size: 5rem;
+          }
         }
-      }
-      input {
-        padding: 10px;
-        &[type="submit"]{
-            // width: fit-content;
-            color: white;
-            background-color: #ff5c00;
+        input {
+          padding: 10px;
+          &[type="submit"] {
+            background-color: yellow;
             font-size: 1.5rem;
-            // padding: 10px 20px;
-            // margin: 0 auto;
             outline: none;
             border: none;
             border-radius: 5px;
             box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.1);
-            &:hover{
-                background-color: #ff3700;
+            &:hover {
+              background-color: Yellow;
             }
-            &:active{
-                background-color: #646464;
+            &:active {
+              background-color: #646464;
             }
+          }
+        }
+        textarea {
+          font-family: Arial, Helvetica, sans-serif;
+          padding: 10px;
+          height: 10rem;
         }
       }
-      textarea {
-        font-family: Arial, Helvetica, sans-serif;
-        padding: 10px;
-        height: 10rem;
+    }
+    .right {
+      @include md {
+        flex: 1;
       }
-    }
-  }
-  .right {
-    @include md {
-      flex: 1;
-      // width: 50%;
-    }
-    .myDetails {
-      display: flex;
-      flex-direction: column;
-      gap: 2.5rem;
-      color: white;
-      height: 100%;
-      box-sizing: border-box;
-      padding: 20px;
-      background-image: linear-gradient(
-        to bottom,
-        rgb(255, 98, 0),
-        rgb(255, 51, 0)
-      );
-      border-radius: 5px;
-      div{
-        hr{
+      .myDetails {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        color: white;
+        height: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+        background-color: transparent;
+        border-radius: 5px;
+        h2{
+          font-weight: 100;
+        }
+        div {
+          hr {
             border: none;
             height: 3px;
-            background-image: linear-gradient(to right, white, rgb(255, 81, 0));
-        }
-        a{
-          h1{
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+            background-image: linear-gradient(to right, white, transparent);
           }
-          color: white;
-          text-decoration: none;
+          a {
+            h1 {
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              font-weight: 100;
+            }
+            color: white;
+            text-decoration: none;
+          }
+          h2{
+            font-weight: 100;
+          }
         }
       }
     }

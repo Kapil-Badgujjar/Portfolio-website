@@ -1,15 +1,16 @@
 @import '../css-config/mixins.scss';
 .ProjectsContainer{
-    background: #446885;
+    background-image: url('../../public/ani_bk10.svg');
     padding: 50px 20px;
     .Projects{
-        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-family: 'Heebo', sans-serif;
         max-width: 1200px;
         margin: 50px auto;
         h1{
-            color: #FF5C00;
+            color: rgb(241, 205, 0);
             text-align: center;
             font-size: 2rem;
+            font-weight: 300;
             @include md{
                 text-align: left;
                 font-size: 3rem;
