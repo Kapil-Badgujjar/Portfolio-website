@@ -1,6 +1,12 @@
 import React from "react";
 import styles from "./ContactMe.module.scss";
-import Button from "../Button/Button";
+import emailimg from '/email.png';
+import phoneimg from '/phone.png';
+import addressimg from '/address.png';
+import reactimg from '/ReactJS.png';
+import githubimg from '/github-colored.png';
+import sass from '/sass.png';
+import love from '/love.png';
 export default function ContactMe() {
   return (
     <div id="contactme" className={styles.ContactMe}>
@@ -34,25 +40,32 @@ export default function ContactMe() {
         </div>
         <div className={styles.right}>
           <div className={styles.myDetails}>
-            <h2>You can contact me here</h2>
-            <div>
-              <h3>E-mail: </h3>
-              <hr />
-              <a href="mailto:kapilbadgujjar99@gmail.com">
-                <h1>kapilbadgujjar99@gmail.com</h1>
-              </a>
+            <div className={styles.up}>
+              <p>You can contact me here :</p>
+              <div>
+                <div className={styles.title}><img src={emailimg} alt="email-id" /><h3>E-mail: </h3></div>
+                <hr />
+                <a href="mailto:kapilbadgujjar99@gmail.com">
+                  <p>kapilbadgujjar99@gmail.com</p>
+                </a>
+              </div>
+              <div>
+              <div className={styles.title}><img src={phoneimg} alt="phone-number" /><h3>Phone:</h3></div>
+                <hr />
+                <a href="tel: +91 7988220911">
+                  <p>+91 7988220911</p>
+                </a>
+              </div>
+              <div>
+              <div className={styles.title}><img src={addressimg} alt="address" /><h3>Address: </h3></div>
+                <hr />
+                <p>Jhajjar &#40;124103&#41;, Haryana, India</p>
+              </div>
             </div>
-            <div>
-              <h3>Phone:</h3>
-              <hr />
-              <a href="tel: +91 7988220911">
-                <h1>+91 7988220911</h1>
-              </a>
-            </div>
-            <div>
-              <h3>Address: </h3>
-              <hr />
-              <h2>VPO Jahazgarh, Jhajjar-124103, Haryana</h2>
+            <div className={styles.down}>
+              <h1>Made with <img src={love} alt='Love' /> by Kapil Badgujjar</h1>
+              <h3>Technologies used <img src={reactimg} alt='REACTJS' /> <img src={sass} alt='SASS' /></h3>
+              <a href="https://github.com/Kapil-Badgujjar/Portfolio-website"><p>Source Code: <img src={githubimg} alt="github"/></p></a>
             </div>
           </div>
         </div>

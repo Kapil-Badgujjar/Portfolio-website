@@ -4,20 +4,20 @@
     flex-direction: column;
     gap: 10px;
     overflow: hidden;
-    margin: 50px 60px;
     height: 400px;
     padding: 20px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(16px);
+    border-radius: 16px;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2);
     @include md{
-        margin: 50px 120px;
+        margin: 50px;
     }
     .title{
         font-size: 1.3rem;
-        font-weight: 600;
+        font-weight: 500;
         @include md{
-            font-size: 1.5rem;
+            font-size: 1.8rem;
         }
     }
     div{
@@ -27,19 +27,25 @@
         @include md{
             flex-direction: row;
         }
+        .description{
+            text-align: justify;
+            font-weight: 400;
+            @include lg{
+                font-size: 1.2rem;
+            }
+        }
         img{
-            width: 240px;
+            width: 200px;
+            border-radius: 10px;
+            outline: 1px solid grey;
             @include md{
                 width: 320px;
                 height: 180px;
             }
             @include lg{
-                width: 400px;
+                width: 600px;
+                height: 280px;
             }
-        }
-        .description{
-            text-align: justify;
-            font-weight: 500;
         }
     }
 }
