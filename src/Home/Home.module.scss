@@ -36,7 +36,6 @@
             h1{
                 font-size: 2.5rem;
                 margin-bottom: 10px;
-                // color: #FF5C00;
                 font-weight: 400;
                 color: yellow;
                 @include md{
@@ -98,7 +97,7 @@
                         }
                     }
                     &:hover{
-                        box-shadow: 0px 0px 6px 3px rgba(246, 255, 0, 0.5);;
+                        box-shadow: 0px 0px 6px 3px rgb(255, 238, 0);;
                         outline: 1px solid white;
                     }
                 }
@@ -106,6 +105,7 @@
                     padding: 5px 8px;
                     border-radius: 5px;
                     &:hover{
+                        box-shadow: 0px 0px 6px 3px rgb(238, 238, 238);;
                         background-image: linear-gradient(to right, rgb(120, 120, 120),rgb(100, 100, 100));
                     }
                 }
@@ -113,6 +113,7 @@
                     padding: 5px 8px;
                     border-radius: 5px;
                     &:hover{
+                        box-shadow: 0px 0px 6px 3px #95f1ff;;
                         background-image: linear-gradient(to right bottom,rgb(47, 116, 184), rgb(30, 105, 166));
                     }
                 }
@@ -120,6 +121,7 @@
                     padding: 5px 8px;
                     border-radius: 5px;
                     &:hover{
+                        box-shadow: 0px 0px 6px 3px rgb(255, 162, 189);;
                         background-image: linear-gradient(to right bottom,rgb(255, 0, 230),rgb(252, 134, 0));
                     }
                 }
@@ -127,6 +129,7 @@
                     padding: 5px 8px;
                     border-radius: 5px;
                     &:hover{
+                        box-shadow: 0px 0px 6px 3px rgb(176, 252, 255);;
                         background-color: rgb(0, 153, 255);
                     }
                 }
@@ -144,8 +147,7 @@
                 align-items: center;
                 border-radius: 50%;
                 padding: 12px;
-                background: linear-gradient(to bottom, #152433, #908a41);
-                // background: linear-gradient(to bottom, #ff0000, #ff00b3);
+                background: linear-gradient(to bottom, #041527, #908a41);
                 img{
                     overflow: hidden;
                     width: 200px;
@@ -157,8 +159,11 @@
                         width: 400px;
                     }
                 }
+                &:hover{
+                    outline: 2px solid white;
+                    box-shadow: 0px 0px 10px 5px rgba(255, 246, 162, 0.839);
+                }
             }
-            // background-color: lightblue;
         }
     }
 }
