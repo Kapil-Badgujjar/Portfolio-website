@@ -26,7 +26,7 @@ export default function Home() {
     <div id="home" className={styles.Home}>
       <div className={styles.HomeContainer}>
         <div className={styles.left}>
-            <h2>Hi ! &nbsp; &nbsp; I am</h2>
+            <h2>Hey! I am</h2>
             <h1>{name}</h1>
             <p>Hello, I'm a passionate Full Stack Web Developer and UI/UX Designer. I create exceptional digital experiences with a focus on user-centric design. Let's build impactful projects together!</p>
             <div className={styles.button}>
