@@ -10,7 +10,7 @@ import PostgreSQLImage from '/PostgreSQL.png'
 import FigmaImage from '/figma.png'
 export default function Skills() {
   return (
-    <div id="skills" className={styles.skills}>
+    <div className={styles.skills}>
     <div  className={styles.skillsContainer}>
       <h1>Skills</h1>
       <div className={styles.skillsimages}>

@@ -9,7 +9,7 @@ import sass from '/sass.png';
 import love from '/love.png';
 export default function ContactMe() {
   return (
-    <div id="contactme" className={styles.ContactMe}>
+    <div className={styles.ContactMe}>
       <div className={styles.ContactMeContainer}>
         <div className={styles.left}>
           <form

@@ -1,0 +1,57 @@
+
+.heroSection {
+    position: relative;
+    min-height: 100vh;
+    background-image: radial-gradient(rgba(0,0,0,0.6),black);
+}
+.heroBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1
+    
+}
+.navbarSticky {
+    position: fixed;
+    background-color: black;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateY(-100%);
+    animation: animateNavbar 0.3s ease forwards;
+    z-index: 5;
+}
+
+.experience {
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.95) );
+}
+
+.upButton{
+    cursor: pointer;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    bottom: 40px;
+    right: 20px;
+    background-image: linear-gradient(to bottom, orange, orangered);
+    height: 60px;
+    width: 60px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+@keyframes animateNavbar{
+    0% { transform: translateY(-100%);}
+    100% { transform: translateY(0%);}
+}

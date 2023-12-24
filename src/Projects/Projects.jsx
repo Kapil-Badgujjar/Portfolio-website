@@ -9,7 +9,7 @@ import ProjectCardX from '../temp/TempComponent';
 
 export default function Projects() {
   return (
-    <div id="projects" className={styles.ProjectsContainer}>
+    <div className={styles.ProjectsContainer}>
     <div className={styles.Projects}>
       <h1>Projects</h1>
       <div className={styles.Carousels}>
