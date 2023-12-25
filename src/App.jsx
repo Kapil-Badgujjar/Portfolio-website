@@ -37,18 +37,14 @@ function App() {
   }
   useEffect(()=>{
     window.addEventListener('scroll', handleScroll);
-    console.log(hRef.current.clientHeight)
-    console.log(sRef.current.clientHeight)
-    console.log(pRef.current.clientHeight)
-    console.log(cRef.current.clientHeight)
   },[])
   return (
     <div>
-      <div ref={hRef} className={styles.heroSection}>
+      <div id="home" ref={hRef} className={styles.heroSection}>
         <heder className={`${scrolled ? styles.navbarSticky:''}`}>
           <Navbar activeLink={activeLink} setActiveLink={setActiveLink} />
         </heder>
-        <div>
+        <div className={styles.homeComponent}>
           <Home />
         </div>
         <img className={styles.heroBackground} src={backgroundImage} alt="background" />
@@ -65,9 +61,6 @@ function App() {
       <div id="contactme"  ref={cRef} style={{height:'100vh'}}>
         <ContactMe />
       </div>
-      {scrolled && <div className={styles.upButton}>
-        Home
-      </div> }
     </div>
   )
 }

@@ -5,35 +5,37 @@ import GitHub from '/github.svg';
 import LinkedIn from '/linkedin.svg';
 import Twitter from '/twitter.svg';
 import Instagram from '/instagram.svg';
+import downIcon from '/down.svg';
 import Button from '../Button/Button';
 export default function Home() {
-  const [name, setName] = useState('Kapil Badgujjar');
+  const [name, setName] = useState('I am Kapil Badgujjar');
   
   useEffect(()=>{
     setTimeout(()=>{
-      if(name==='Kapil Badgujjar'){
+      if(name==='I am Kapil Badgujjar'){
           setName('Full Stack Developer');
         }
-        // else if(name==='Full Stack Developer'){
-        //   setName('UI/UX Designer');
-        // }
+        else if(name==='Full Stack Developer'){
+          setName('UI/UX Designer');
+        }
         else{
-          setName('Kapil Badgujjar');
+          setName('I am Kapil Badgujjar');
         }
       }, 2000);
   },[name]);
 
   return (
+<div className={styles.HomeContainer}>
     <div className={styles.Home}>
         <div className={styles.left}>
             <h2>Hello...</h2>
             <h1>{name}</h1>
             <p>Hello, I'm a passionate Full Stack Web Developer and UI/UX Designer. I create exceptional digital experiences with a focus on user-centric design. Let's build impactful projects together!</p>
-            {/* <div className={styles.button}>
+            <div className={styles.button}>
                 <a href="https://drive.google.com/uc?export=download&id=1OdBeowxoGlnSKHDNlsELbZulwWcARFJK">
-                    <Button title="Download CV" />
+                    <Button title="Download Resume" />
                 </a>
-            </div> */}
+            </div>
             <div className={styles.SocialMedia}>
                 <a href="https://github.com/Kapil-Badgujjar" className={styles.s1}>
                     <img src={GitHub} alt="github" /> 
@@ -53,11 +55,30 @@ export default function Home() {
                 </a>
             </div>
         </div>
+        <div className={styles.center}>
+            <p className={styles.accentText}>SCROLL</p>
+            <div className={styles.scrollAccentAnimation}>
+                <div className={styles.scrollLine} />
+                <div className={styles.scrollBullet} />
+            </div>
+            <a href="#experience"><img src={downIcon} alt=""/></a>
+        </div>
         <div className={styles.right}>
             <div>
                 <img src={HeroImage} alt="Hero image" />
             </div>
         </div>
       </div>
+      <div className={styles.homeBottom}>
+        <div>
+
+        </div>
+            <div className={styles.downIons}>
+        </div>
+        <div>
+            <p className={styles.seeMoreButton}>See My Blogs</p>
+        </div>
+      </div>
+    </div>
   )
 }
