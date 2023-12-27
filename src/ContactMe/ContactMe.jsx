@@ -10,10 +10,13 @@ import love from '/love.png';
 export default function ContactMe() {
   return (
     <div className={styles.ContactMe}>
-      <div className={styles.ContactMeContainer}>
+      <div className={styles.head}>
+        <h1 className={styles.title}>Contact Me</h1>
+      </div>
+      <div className={styles.main}>
         <div className={styles.left}>
           <form
-            action="https://formsubmit.co/kapilbadgujjar99@gmail.com"
+            // action="https://formsubmit.co/kapilbadgujjar99@gmail.com"
             method="POST"
           >
             <div>Get in touch</div>
@@ -23,7 +26,7 @@ export default function ContactMe() {
               placeholder="Your Name"
               required
             />
-            <input type="email" name="email" placeholder="email" required />
+            <input type="email" name="email" placeholder="Email" required />
             <input
               type="text"
               name="name"
@@ -39,36 +42,31 @@ export default function ContactMe() {
           </form>
         </div>
         <div className={styles.right}>
-          <div className={styles.myDetails}>
-            <div className={styles.up}>
-              <p>You can contact me here :</p>
-              <div>
-                <div className={styles.title}><img src={emailimg} alt="email-id" /><h3>E-mail: </h3></div>
-                <hr />
-                <a href="mailto:kapilbadgujjar99@gmail.com">
-                  <p>kapilbadgujjar99@gmail.com</p>
-                </a>
-              </div>
-              <div>
-              <div className={styles.title}><img src={phoneimg} alt="phone-number" /><h3>Phone:</h3></div>
-                <hr />
+          <div className={styles.up}>
+            <p>You can contact me here :</p>
+            <div>
+              <p>E-mail: </p>
+              <a href="mailto:kapilbadgujjar99@gmail.com">
+                <p>kapilbadgujjar99@gmail.com</p>
+              </a>
+            </div>
+            <div>
+              <p>Phone:</p>
                 <a href="tel: +91 7988220911">
                   <p>+91 7988220911</p>
                 </a>
-              </div>
-              <div>
-              <div className={styles.title}><img src={addressimg} alt="address" /><h3>Address: </h3></div>
-                <hr />
-                <p>Jhajjar &#40;124103&#41;, Haryana, India</p>
-              </div>
             </div>
-            <div className={styles.down}>
-              <h1>Made with <img src={love} alt='Love' /> by Kapil Badgujjar</h1>
-              <h3>Technologies used <img src={reactimg} alt='REACTJS' /> <img src={sass} alt='SASS' /></h3>
-              <a href="https://github.com/Kapil-Badgujjar/Portfolio-website"><p>Source Code: <img src={githubimg} alt="github"/></p></a>
+            <div>
+              <p>Address: </p>
+              <p>Jhajjar &#40;124103&#41;, Haryana, India</p>
             </div>
           </div>
         </div>
+      </div>
+      <div className={styles.bottom}>
+          <div className={styles.down}>
+            <h2>Made with <img src={love} alt='Love' /> by Kapil Badgujjar</h2>
+          </div>
       </div>
     </div>
   );

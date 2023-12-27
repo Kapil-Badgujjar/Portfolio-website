@@ -8,29 +8,37 @@ import Instagram from '/instagram.svg';
 import downIcon from '/down.svg';
 import Button from '../Button/Button';
 export default function Home() {
-  const [name, setName] = useState('I am Kapil Badgujjar');
+  // const [name, setName] = useState('I am Kapil Badgujjar');
   
-  useEffect(()=>{
-    setTimeout(()=>{
-      if(name==='I am Kapil Badgujjar'){
-          setName('Full Stack Developer');
-        }
-        else if(name==='Full Stack Developer'){
-          setName('UI/UX Designer');
-        }
-        else{
-          setName('I am Kapil Badgujjar');
-        }
-      }, 2000);
-  },[name]);
+  // useEffect(()=>{
+  //   setTimeout(()=>{
+  //     if(name==='I am Kapil Badgujjar'){
+  //         setName('Full Stack Developer');
+  //       }
+  //       else if(name==='Full Stack Developer'){
+  //         setName('UI/UX Designer');
+  //       }
+  //       else{
+  //         setName('I am Kapil Badgujjar');
+  //       }
+  //     }, 2000);
+  // },[name]);
 
   return (
 <div className={styles.HomeContainer}>
     <div className={styles.Home}>
         <div className={styles.left}>
-            <h2>Hello...</h2>
-            <h1>{name}</h1>
-            <p>Hello, I'm a passionate Full Stack Web Developer and UI/UX Designer. I create exceptional digital experiences with a focus on user-centric design. Let's build impactful projects together!</p>
+            <div className={styles.welcomeMessage}>
+              Hi! My name is
+              {/* <p className={styles.hiText}>Hi!</p>
+              <p className={styles.nameText}>My name is</p> */}
+            </div>
+            <div className={styles.intro}>
+              <h1>Kapil Badgujjar</h1>
+              <hr/>
+              <p>Full Stack Developer</p>
+            </div>
+            <p>I'm a passionate Full Stack Web Developer and UI/UX Designer with 1+ years of professonal experience in web technologies. I create exceptional digital experiences with a focus on user-centric design. Let's build impactful projects together!</p>
             <div className={styles.button}>
                 <a href="https://drive.google.com/uc?export=download&id=1OdBeowxoGlnSKHDNlsELbZulwWcARFJK">
                     <Button title="Download Resume" />
@@ -49,10 +57,10 @@ export default function Home() {
                     <img src={Instagram} alt="instagram" /> 
                     <span>Instagram</span>
                 </a>
-                <a href="" className={styles.s4}>
+                {/* <a href="" className={styles.s4}>
                     <img src={Twitter} alt="twitter" /> 
                     <span>Twitter</span>
-                </a>
+                </a> */}
             </div>
         </div>
         <div className={styles.center}>
@@ -61,7 +69,7 @@ export default function Home() {
                 <div className={styles.scrollLine} />
                 <div className={styles.scrollBullet} />
             </div>
-            <a href="#experience"><img src={downIcon} alt=""/></a>
+            {/* <a href="#experience"><img src={downIcon} alt=""/></a> */}
         </div>
         <div className={styles.right}>
             <div>
@@ -69,7 +77,7 @@ export default function Home() {
             </div>
         </div>
       </div>
-      <div className={styles.homeBottom}>
+      {/* <div className={styles.homeBottom}>
         <div>
 
         </div>
@@ -78,7 +86,7 @@ export default function Home() {
         <div>
             <p className={styles.seeMoreButton}>See My Blogs</p>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

@@ -7,6 +7,7 @@ import Navbar from './Navbar/Navbar'
 
 import backgroundImage from '/ani_bk3.svg'
 import { useState, useEffect, useRef } from 'react'
+import Experience from './Experience/Experience'
 
 function App() {
   const hRef = useRef(null);
@@ -23,7 +24,7 @@ function App() {
     let s = sRef.current.clientHeight;
     let p = pRef.current.clientHeight;
     let c = cRef.current.clientHeight;
-    if (offset < h){ setScrolled(false); setActiveLink(undefined); }
+    if (offset < h-20){ setScrolled(false); setActiveLink(undefined); }
     else { 
       setScrolled(true); 
       if(offset > h+e+p+s-80){
@@ -41,6 +42,7 @@ function App() {
   return (
     <div>
       <div id="home" ref={hRef} className={styles.heroSection}>
+        <div className={`${scrolled ? styles.blankfill:''}`}></div>
         <heder className={`${scrolled ? styles.navbarSticky:''}`}>
           <Navbar activeLink={activeLink} setActiveLink={setActiveLink} />
         </heder>
@@ -50,7 +52,7 @@ function App() {
         <img className={styles.heroBackground} src={backgroundImage} alt="background" />
       </div>
       <div id="experience" href={eRef} className={styles.experience}>
-
+          <Experience />
       </div>
       <div id="projects" ref={pRef}>
         <Projects />
