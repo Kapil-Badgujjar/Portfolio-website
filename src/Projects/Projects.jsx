@@ -9,9 +9,14 @@ import ProjectCardX from '../temp/TempComponent';
 
 export default function Projects() {
   return (
-    <div id="projects" className={styles.ProjectsContainer}>
+    <div className={styles.ProjectsContainer}>
+      <div className={styles.head}>
+        <h1 className={styles.title}>Projects</h1>
+      </div>
     <div className={styles.Projects}>
-      <h1>Projects</h1>
+      <div>
+        Hello sample
+      </div>
       <div className={styles.Carousels}>
         <ProjectCardX cards={[
               <ProjectCard title="SuperMART" image={supermartimage} description="SuperMART is a e-commerce application developed in ReactJS and ExpressJS. For database I used PostgreSQL. I have implemented authentication process using express session, state management using Context and Email verification using SendGrid api. This Application Provides Home page to shwo popular products, Product landing pages for each product, user cart, admin panel to manage products and orders."/>,

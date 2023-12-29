@@ -1,25 +1,37 @@
 @import '../css-config/mixins.scss';
 .ProjectsContainer{
-    background-image: url('../../public/Moon_1.svg');
-    padding: 50px 20px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 1));
+    min-height: 100vh;
+    padding: 80px 40px;
+    .head {
+        border-left: 3px solid  rgb(255, 0, 55);
+        padding: 0px 20px;
+        .title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 300;
+            color:  rgb(255, 0, 55);
+        }
+    }
     .Projects{
         font-family: 'Heebo', sans-serif;
         max-width: 1200px;
         margin: 50px auto;
-        h1{
-            color: gold;
-            text-align: center;
-            font-size: 2rem;
-            font-weight: 300;
-            @include md{
-                text-align: left;
-                font-size: 3rem;
-            }
-            @include lg {
-                font-size: 5rem;
-                font-weight: 400;
-            }
-        }
+        
+        // h1{
+        //     color: gold;
+        //     text-align: center;
+        //     font-size: 2rem;
+        //     font-weight: 300;
+        //     @include md{
+        //         text-align: left;
+        //         font-size: 3rem;
+        //     }
+        //     @include lg {
+        //         font-size: 5rem;
+        //         font-weight: 400;
+        //     }
+        // }
         // .Carousels{
         //     display: flex;
         //     overflow: hidden;
