@@ -8,6 +8,7 @@ import Navbar from './Navbar/Navbar'
 import backgroundImage from '/ani_bk3.svg'
 import { useState, useEffect, useRef } from 'react'
 import Experience from './Experience/Experience'
+import BackgroundAnimation from './temp/BackgroundAnimation'
 
 function App() {
   const hRef = useRef(null);
@@ -41,6 +42,7 @@ function App() {
   },[])
   return (
     <div>
+      <div style={{position:'fixed',width:'100vw',height:'100vh', backgroundColor:'black', zIndex:'-10'}}></div>
       <div id="home" ref={hRef} className={styles.heroSection}>
         <div className={`${scrolled ? styles.blankfill:''}`}></div>
         <heder className={`${scrolled ? styles.navbarSticky:''}`}>
@@ -60,8 +62,11 @@ function App() {
       <div id="skills" ref={sRef}>
         <Skills />
       </div>
-      <div id="contactme"  ref={cRef} style={{height:'100vh'}}>
+      <div id="contactme"  ref={cRef} style={{minHeight:'100vh'}}>
         <ContactMe />
+      </div>
+      <div style={{position: 'fixed', width:'100vw', top:'90%', left: '95%', transform: 'translate(-50%,-50%)', zIndex:'-8', opacity:'0.5'}}>
+        <BackgroundAnimation />
       </div>
     </div>
   )

@@ -6,6 +6,7 @@ import chatappimage from '/ecom2.png';
 import webcrawlerimage from '/webcrawler.png';
 
 import ProjectCardX from '../temp/TempComponent';
+import BackgroundAnimation from '../temp/BackgroundAnimation';
 
 export default function Projects() {
   return (

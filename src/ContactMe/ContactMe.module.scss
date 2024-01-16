@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background-color: black;
+  // background-color: black;
   padding: 80px 40px;
   min-height: 100vh;
   .head {
@@ -19,13 +19,17 @@
   .main {
     display: flex;
     flex-direction: column;
+    gap: 40px;
     @include md {
       flex-direction: row;
+      gap: 0px;
     }
     .left {
       flex: 1;
       font-family: 'Poppins', sans-serif;
-      padding: 20px;
+      @include md{
+        padding: 20px;
+      }
       form {
         display: flex;
         flex-direction: column;
@@ -41,6 +45,7 @@
         }
         input, textarea {
           background-color: transparent;
+          font-weight: 200;
           padding: 4px 8px;
           color: white;
           border: 2px solid rgba(255, 0, 55, 0.8);
@@ -57,7 +62,9 @@
     .right {
       flex: 1;
       font-family: 'Poppins', sans-serif;
-      padding: 20px;
+      @include md{
+        padding: 20px;
+      }
       @include md {
         padding-left: 60px;
         border-left: 1px solid white;
@@ -96,9 +103,6 @@
     border-radius: 4px;
     @include md{
       padding-top: 120px;
-    }
-    @include xxl {
-      padding-top: 20px;
     }
     .down{
       h2{

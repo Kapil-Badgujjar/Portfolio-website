@@ -36,6 +36,7 @@ export default function ContactMe() {
             <textarea
               name="message"
               placeholder="Write a message..."
+              rows="6"
               required
             />
             <input type="submit" value="Submit" />
