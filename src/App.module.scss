@@ -1,4 +1,17 @@
 @import '../src/css-config/mixins.scss';
+::-webkit-scrollbar {
+    display: none;
+  }
+  
+  ::-webkit-scrollbar-button {
+    display: none;
+  }
+  
+  body {
+    -ms-overflow-style:none;
+  }
+  
+
 .heroSection {
     position: relative;
     min-height: 100vh;
