@@ -1,0 +1,31 @@
+@import "../css-config/mixins.scss";
+.experienceContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 80px 40px;
+    height: 100%;
+    @include md{
+        gap: 80px;
+    }
+    .head {
+        border-left: 3px solid  rgb(255, 0, 55);
+        padding: 0px 20px;
+        .title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 300;
+            color:  rgb(255, 0, 55);
+        }
+    }
+    .main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        @include md{
+            padding: 0px 60px;
+        }
+    }
+}

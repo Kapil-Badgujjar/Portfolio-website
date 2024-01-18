@@ -1,150 +1,137 @@
 @import "../css-config/mixins.scss";
 .ContactMe {
-  background-image: url("../../public/ani_bk10.svg");
-  padding: 50px 0px;
-  max-height: 1080px;
-  .ContactMeContainer {
-    box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: black;
+  padding: 80px 40px;
+  min-height: 100vh;
+  .head {
+    border-left: 3px solid  rgb(255, 0, 55);
+    padding: 0px 20px;
+    .title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 2.5rem;
+        font-weight: 300;
+        color:  rgb(255, 0, 55);
+    }
+}
+  .main {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    font-family: "Heebo", sans-serif;
-    font-size: 1.2rem;
-    font-weight: 500;
-    max-width: 1200px;
-    margin: 0px auto;
-    padding: 0px 20px;
+    gap: 40px;
     @include md {
       flex-direction: row;
+      gap: 0px;
     }
     .left {
+      flex: 1;
+      font-family: 'Poppins', sans-serif;
+      @include md{
+        padding: 20px;
+      }
       form {
         display: flex;
         flex-direction: column;
-        gap: 20px;
-        @include md {
-          flex: 1;
-        }
+        gap: 16px;
         div {
-          color: gold;
+          color:  rgb(255, 0, 55);
           text-align: center;
           font-size: 2rem;
           font-weight: 300;
           @include md {
             text-align: left;
-            font-size: 3rem;
-            // font-weight: 300;
-          }
-          @include lg {
-            font-size: 4rem;
-            font-weight: 300;
           }
         }
-        input {
-          padding: 10px;
-          &[type="submit"] {
-            padding: 3px;
-            background-color: gold;
-            font-size: 1.3rem;
-            outline: none;
-            border: none;
-            border-radius: 5px;
-            box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.1);
-            &:hover {
-              background-color: goldenrod;
-            }
-            &:active {
-              background-color: #646464;
-            }
+        input, textarea {
+          background-color: transparent;
+          outline: none;
+          font-weight: 300;
+          padding: 4px 8px;
+          color: white;
+          border: 2px solid rgba(255, 0, 55, 0.8);
+          border-radius: 4px;
+          &:hover{
+            color: black;
+            background-color: white;
+          }
+          &:focus{
+            color: black;
+            background-color: white;
           }
         }
-        textarea {
-          font-family: Arial, Helvetica, sans-serif;
-          padding: 10px;
-          height: 10rem;
+        input[type="submit"]{
+            background-color: rgba(255, 0, 55, 1);
         }
       }
     }
     .right {
-      @include md {
-        flex: 1;
-      }
-      .myDetails {
-        .up {
-          display: flex;
-          flex-direction: column;
-          justify-content: start;
-          height: 100%;
-          box-sizing: border-box;
-          padding: 20px;
-          background-color: transparent;
-          border-radius: 5px;
-          p {
-            font-weight: 200;
-            @include md {
-              font-size: 1.5rem;
-            }
-          }
-          div {
-            hr {
-              border: none;
-              height: 3px;
-              background-image: linear-gradient(to right, black, transparent);
-              margin: 4px 0px;
-            }
-            a {
-              p {
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                font-weight: 200;
-              }
-              // color: white;
-              color: black;
-              text-decoration: none;
-            }
-            .title {
-              display: flex;
-              align-items: center;
-              gap: 10px;
-              img {
-                width: 25px;
-                height: 25px;
-              }
-              h3 {
-                font-size: 1rem;
-                font-weight: 400;
-                margin: 0px;
-                @include md {
-                  font-size: 1.5rem;
-                }
-              }
-            }
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      // @include md{
+      //   padding: 20px;
+      // }
+      // @include md {
+      //   padding-left: 60px;
+      //   border-left: 1px solid white;
+      // }
+      .card{
+        display: flex;
+        flex-direction: column;
+        gap:2px;
+        color:white;
+        padding: 24px;
+        border-radius: 8px;
+        box-shadow: 5px 3px 12px 3px rgba(255, 255, 255, 0.3);;
+        background-image: linear-gradient(to right bottom, rgb(15, 15, 15), rgb(5,5,5));
+        height: 100%;
+        h1{
+          font-weight: 300;
+        }
+        p{
+          color:  white;
+          text-align: left;
+          font-size: 1rem;
+          font-weight: 200;
+          @include md {
+            font-size: 1.2rem;
+            text-align: left;
           }
         }
-        .down{
-          padding: 20px;
-          h3{
-            color: gray;
-            img{
-              width: 60px;
-            }
-          }
-          h1{
-              color: gray;
-              img{
-                width: 60px;
-              }
-          }
-          a{
-            text-decoration: none;
-            color: rgb(0, 81, 128);
-            p{
-              font-size: 1.5rem;
-              img{
-                width: 40px;
-              }
-            }
+        a{
+          text-decoration: none;
+        }
+        div{
+          display: flex;
+          flex-direction: column;;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+  .bottom {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    border-radius: 4px;
+    @include md{
+      padding-top: 120px;
+    }
+    .down{
+      h2{
+        font-size: 1rem;
+        color: white;
+        @include md {
+          font-size: 1.5rem;
+        }
+        img{
+          width: 40px;
+          @include md {
+            width: 60px;
           }
         }
       }

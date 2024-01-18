@@ -1,0 +1,63 @@
+@import '../css-config/mixins.scss';
+
+.animationContainer{
+    box-sizing: border-box;
+    width: 100%;
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    @include lg {
+        padding: 0px;
+    }
+    .bgAni{
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        .aniImg1{
+            padding: 20px;
+            width: 80%;
+            animation: rotate 60s linear infinite;
+        }
+        .aniImg2{
+            width: 50%;
+            animation: rotate 40s linear infinite;
+        }
+        .aniImg3{
+            width: 20%;
+            animation: rotate 20s linear infinite;
+        }
+        .aniImg2{
+            position: absolute;
+            top: 20%;
+            transform: translateY(-50%);
+        }
+        
+        .aniImg3{
+            position: absolute;
+            top: 40%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(90deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    75%{
+        transform: rotate(270deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

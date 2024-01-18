@@ -9,9 +9,9 @@ function ProjectCardX(props) {
       <Carousel.Item interval={5000}>
       {props.cards[1]}
       </Carousel.Item>
-      {/* <Carousel.Item interval={5000}>
+      <Carousel.Item interval={5000}>
       {props.cards[2]}
-      </Carousel.Item> */}
+      </Carousel.Item>
     </Carousel>
   );
 }
