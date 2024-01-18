@@ -28,12 +28,12 @@ function App() {
     if (offset < h-20){ setScrolled(false); setActiveLink(undefined); }
     else { 
       setScrolled(true); 
-      if(offset > h+e+p+s-80){
+      if(offset > h+e+s+p-80){
         setActiveLink('Contact Me')
-      } else if(offset > h+e+p-80){
-        setActiveLink('Skills');
-      }else if(offset > h+e){
+      } else if(offset > h+e+s-80){
         setActiveLink('Projects');
+      }else if(offset > h+e){
+        setActiveLink('Skills');
       } else setActiveLink('Experience');
     }
   }
@@ -45,9 +45,9 @@ function App() {
       <div style={{position:'fixed',width:'100vw',height:'100vh', backgroundColor:'black', zIndex:'-10'}}></div>
       <div id="home" ref={hRef} className={styles.heroSection}>
         <div className={`${scrolled ? styles.blankfill:''}`}></div>
-        <heder className={`${scrolled ? styles.navbarSticky:''}`}>
+        <header className={`${scrolled ? styles.navbarSticky:''}`}>
           <Navbar activeLink={activeLink} setActiveLink={setActiveLink} />
-        </heder>
+        </header>
         <div className={styles.homeComponent}>
           <Home />
         </div>
@@ -56,16 +56,16 @@ function App() {
       <div id="experience" href={eRef} className={styles.experience}>
           <Experience />
       </div>
-      <div id="projects" ref={pRef}>
-        <Projects />
-      </div>
       <div id="skills" ref={sRef}>
         <Skills />
+      </div>
+      <div id="projects" ref={pRef}>
+        <Projects />
       </div>
       <div id="contactme"  ref={cRef} style={{minHeight:'100vh'}}>
         <ContactMe />
       </div>
-      <div style={{position: 'fixed', width:'100vw', top:'90%', left: '95%', transform: 'translate(-50%,-50%)', zIndex:'-8', opacity:'0.5'}}>
+      <div className={styles.bkAnimation}>
         <BackgroundAnimation />
       </div>
     </div>

@@ -43,24 +43,27 @@ export default function ContactMe() {
           </form>
         </div>
         <div className={styles.right}>
-          <div className={styles.up}>
-            <p>You can contact me here :</p>
+          <div className={styles.card}>
+            <h1>You can contact me here:</h1>
+            <hr/>
             <div>
-              <p>E-mail: </p>
+              <span>Email: </span>
               <a href="mailto:kapilbadgujjar99@gmail.com">
                 <p>kapilbadgujjar99@gmail.com</p>
               </a>
             </div>
             <div>
-              <p>Phone:</p>
+              <span>Phone:</span>
                 <a href="tel: +91 7988220911">
                   <p>+91 7988220911</p>
                 </a>
             </div>
             <div>
-              <p>Address: </p>
-              <p>Jhajjar &#40;124103&#41;, Haryana, India</p>
+              <span>Address: </span>
+              <p>Jhajjar, Haryana, India</p>
             </div>
+            <br/>
+            <hr/>
           </div>
         </div>
       </div>

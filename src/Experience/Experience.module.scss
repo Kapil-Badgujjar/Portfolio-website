@@ -22,83 +22,10 @@
     .main {
         display: flex;
         flex-direction: column;
-        gap: 40px;
         width: 100%;
         height: 100%;
         @include md{
-            gap: 60px;
-        }
-        @include xl{
-            gap: 120px;
-            padding: 0px 120px;
-        }
-        .experienceCard{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            gap: 20px;
-            color: white;
-            border-radius: 10px;
-            @include md{
-                // gap: 80px;
-            }
-            .companyLogoCard1, .companyLogoCard2 {
-                flex: 1;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                border-radius: 10px;
-                @include lg{
-                    padding: 0px 40px;
-                }
-                h1{
-                    font-family: 'Poppins', sans-serif;
-                    font-size: 1.5rem;
-                    font-weight: 300;
-                    letter-spacing: 4px;
-                    width: fit-content;
-                    padding-bottom: 16px;
-                    border-bottom: 2px solid white;
-                }
-                img {
-                    width: 160px;
-                    padding-top: 16px;
-                    @include lg {
-                        width: 280px;
-                    }
-                }
-
-            }
-
-            .companyDetailsCard1, .companyDetailsCard2{
-                flex: 1;
-                display: flex;
-                flex-direction: column;
-                gap: 16px;
-                font-family: 'Poppins', sans-serif;
-                border-radius: 10px;
-                @include md{
-                    margin-left: 80px;
-                }
-                @include lg{
-                    margin-left: 160px;
-                    padding: 0px 40px;
-                }
-                h1{
-                    letter-spacing: 4px;
-                }
-                h2{
-                    font-size: 0.8rem;
-                    font-weight: 300;
-                    letter-spacing: 4px;
-                }
-                div{
-                    list-style-type: none;
-                    display: flex;
-                    flex-direction: column;
-                    letter-spacing: 2px;
-                }
-            }
+            padding: 0px 60px;
         }
     }
 }

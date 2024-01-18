@@ -22,28 +22,18 @@
         flex-wrap: wrap;
         height: 100%;
     }
-    .Projects{
-        font-family: 'Heebo', sans-serif;
-        max-width: 1200px;
-        margin: 50px auto;
-        
-        // h1{
-        //     color: gold;
-        //     text-align: center;
-        //     font-size: 2rem;
-        //     font-weight: 300;
-        //     @include md{
-        //         text-align: left;
-        //         font-size: 3rem;
-        //     }
-        //     @include lg {
-        //         font-size: 5rem;
-        //         font-weight: 400;
-        //     }
-        // }
-        // .Carousels{
-        //     display: flex;
-        //     overflow: hidden;
-        // }
+    .foot{
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        a{
+            color: #212529;
+            text-decoration: none;
+            h1{
+                width: fit-content;
+                border-bottom: 2px solid #212529;
+            }
+        }
     }
 }

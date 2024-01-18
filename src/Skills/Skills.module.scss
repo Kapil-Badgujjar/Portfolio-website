@@ -45,29 +45,64 @@
         // box-shadow: 0px 0px 24px 3px  rgba(255, 0, 55, 1);
       }
       h2 {
+        display: flex;
+        gap:8px;
+        align-items: center;
         font-size: 1rem;
         font-weight: 300;
         letter-spacing: 1px;
         @include md {
           font-size: 1.2rem;
         }
+        img{
+          width: 20px;
+        }
       }
       .skillImages {
         display: flex;
         flex-wrap: wrap;
-        gap: 24px;
+        justify-content: space-around;
+        gap: 16px;
         padding: 10px;
+        @include xs{
+          justify-content: start;
+        }
         @include md {
           padding: 10px 40px;
         }
-        img {
-          width: 40px;
-          @include md {
-            width: 80px;
+        .skill {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          gap: 12px;
+          width: 100px;
+          img {
+            width: 60px;
+            @include md {
+              width: 80px;
+            }
+          }
+          p{
+            height: fit-content;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            padding: 0px 4px;
+            text-align: center;
+            width: 100%;
+            color:black;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 3px;
+          }
+          &:hover{
+            p{
+              color: white;
+              background-color: #ff0037;
+            }
           }
         }
       }
     }
   }
 }
-
