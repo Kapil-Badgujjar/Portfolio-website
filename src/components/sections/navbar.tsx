@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { Button } from "@/components/ui/button";
 import { navLinks, personal } from "@/lib/data";
 import { cn } from "@/lib/utils";
+import { scrollToId } from "@/lib/smooth-scroll";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -46,20 +47,15 @@ export function Navbar() {
   const handleNavClick = useCallback(
     (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
       const id = href.replace("#", "");
-      const el = document.getElementById(id);
-      if (!el) return; // missing target → fall back to default behavior
+      if (!document.getElementById(id)) return; // no target → default behavior
       e.preventDefault();
       setOpen(false);
-      // Header is position:fixed, so the target's offset is stable whether the
-      // mobile menu is open or closed. Drive the scroll ourselves with a navbar
-      // offset; relying on native hash scroll gets cancelled by the re-render.
-      const top = Math.max(
-        0,
-        el.getBoundingClientRect().top + window.scrollY - 80
-      );
-      window.scrollTo({ top, behavior: "smooth" });
+      // Custom rAF smooth-scroll (see lib/smooth-scroll). Header is fixed, so the
+      // 80px offset keeps the target clear of the navbar. We update the hash after
+      // a tick so the URL reflects the section without triggering a native jump.
+      scrollToId(id, 80);
       if (typeof history !== "undefined") {
-        history.replaceState(null, "", href);
+        window.setTimeout(() => history.replaceState(null, "", href), 0);
       }
     },
     []

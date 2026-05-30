@@ -145,7 +145,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${jakarta.variable} ${spaceGrotesk.variable} ${jetbrains.variable} dark scroll-smooth scroll-pt-20`}
+      className={`${jakarta.variable} ${spaceGrotesk.variable} ${jetbrains.variable} dark scroll-pt-20`}
     >
       <body className="bg-background text-foreground min-h-screen antialiased">
         <PersonJsonLd />
