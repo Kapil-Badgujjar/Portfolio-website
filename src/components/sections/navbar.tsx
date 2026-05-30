@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { navLinks, personal } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import { scrollToId } from "@/lib/smooth-scroll";
+import { ThemeSwitcher } from "@/components/theme/theme-switcher";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -112,7 +113,8 @@ export function Navbar() {
           })}
         </ul>
 
-        <div className="hidden md:block">
+        <div className="hidden md:flex items-center gap-2">
+          <ThemeSwitcher />
           <Button asChild variant="gradient" size="sm">
             <a href={personal.resumeUrl} target="_blank" rel="noopener">
               <Download className="size-4" />
@@ -121,13 +123,16 @@ export function Navbar() {
           </Button>
         </div>
 
-        <button
-          aria-label="Toggle menu"
-          className="md:hidden inline-flex items-center justify-center size-10 rounded-full border border-white/10 bg-white/[0.03] text-foreground"
-          onClick={() => setOpen((v) => !v)}
-        >
-          {open ? <X className="size-5" /> : <Menu className="size-5" />}
-        </button>
+        <div className="md:hidden flex items-center gap-2">
+          <ThemeSwitcher />
+          <button
+            aria-label="Toggle menu"
+            className="inline-flex items-center justify-center size-10 rounded-full border border-white/10 bg-white/[0.03] text-foreground"
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? <X className="size-5" /> : <Menu className="size-5" />}
+          </button>
+        </div>
       </nav>
 
       <AnimatePresence>

@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import { personal, socials } from "@/lib/data";
 import { SiteBackground } from "@/components/shared/site-background";
+import { ThemeProvider } from "@/components/theme/theme-provider";
+import { THEME_INIT_SCRIPT } from "@/lib/themes";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -148,9 +150,12 @@ export default function RootLayout({
       className={`${jakarta.variable} ${spaceGrotesk.variable} ${jetbrains.variable} dark scroll-pt-20`}
     >
       <body className="bg-background text-foreground min-h-screen antialiased">
-        <PersonJsonLd />
-        <SiteBackground />
-        {children}
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+        <ThemeProvider>
+          <PersonJsonLd />
+          <SiteBackground />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
