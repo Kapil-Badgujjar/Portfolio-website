@@ -10,7 +10,7 @@ export function SiteBackground() {
       {/* slow drifting ambient orbs — colors follow the active theme */}
       <div
         className="absolute -top-40 -left-32 h-[38rem] w-[38rem] rounded-full blur-[150px] animate-blob opacity-[0.15]"
-        style={{ backgroundColor: "var(--color-accent-1)" }}
+        style={{ backgroundColor: "var(--color-accent)" }}
       />
       <div
         className="absolute top-1/3 -right-40 h-[34rem] w-[34rem] rounded-full blur-[160px] animate-blob opacity-[0.12] [animation-delay:5s]"
