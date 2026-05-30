@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Menu, X, Download } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { Button } from "@/components/ui/button";
@@ -43,6 +43,28 @@ export function Navbar() {
     return () => observer.disconnect();
   }, []);
 
+  const handleNavClick = useCallback(
+    (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+      const id = href.replace("#", "");
+      const el = document.getElementById(id);
+      if (!el) return; // missing target → fall back to default behavior
+      e.preventDefault();
+      setOpen(false);
+      // Header is position:fixed, so the target's offset is stable whether the
+      // mobile menu is open or closed. Drive the scroll ourselves with a navbar
+      // offset; relying on native hash scroll gets cancelled by the re-render.
+      const top = Math.max(
+        0,
+        el.getBoundingClientRect().top + window.scrollY - 80
+      );
+      window.scrollTo({ top, behavior: "smooth" });
+      if (typeof history !== "undefined") {
+        history.replaceState(null, "", href);
+      }
+    },
+    []
+  );
+
   return (
     <motion.header
       initial={{ y: -32, opacity: 0 }}
@@ -58,6 +80,7 @@ export function Navbar() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-10 h-16 sm:h-20">
         <a
           href="#home"
+          onClick={(e) => handleNavClick(e, "#home")}
           className="font-display text-lg font-semibold tracking-tight"
         >
           <span className="text-gradient">{personal.shortName}</span>
@@ -71,6 +94,7 @@ export function Navbar() {
               <li key={link.href}>
                 <a
                   href={link.href}
+                  onClick={(e) => handleNavClick(e, link.href)}
                   className={cn(
                     "relative px-4 py-2 rounded-full text-sm transition-colors",
                     isActive
@@ -124,7 +148,7 @@ export function Navbar() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    onClick={() => setOpen(false)}
+                    onClick={(e) => handleNavClick(e, link.href)}
                     className="block px-4 py-3 rounded-lg text-sm text-zinc-300 hover:bg-white/[0.04]"
                   >
                     {link.label}
