@@ -147,6 +147,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${jakarta.variable} ${spaceGrotesk.variable} ${jetbrains.variable} dark scroll-pt-20`}
     >
       <body className="bg-background text-foreground min-h-screen antialiased">
