@@ -8,7 +8,12 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import { DEFAULT_THEME, THEME_STORAGE_KEY, THEMES } from "@/lib/themes";
+import {
+  applyThemeColors,
+  DEFAULT_THEME,
+  THEME_STORAGE_KEY,
+  THEMES,
+} from "@/lib/themes";
 
 type ThemeContextValue = {
   theme: string;
@@ -33,12 +38,12 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     }
     const valid = THEMES.some((t) => t.id === stored) ? stored! : DEFAULT_THEME;
     setThemeState(valid);
-    document.documentElement.setAttribute("data-theme", valid);
+    applyThemeColors(valid);
   }, []);
 
   const setTheme = useCallback((id: string) => {
     setThemeState(id);
-    document.documentElement.setAttribute("data-theme", id);
+    applyThemeColors(id);
     try {
       localStorage.setItem(THEME_STORAGE_KEY, id);
     } catch {
